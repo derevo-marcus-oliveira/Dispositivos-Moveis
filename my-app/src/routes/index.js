@@ -11,10 +11,8 @@ export default function Routes(){
     
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Welcome" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator>
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Welcome" component={Welcome} />
-        <Stack.Screen name="HomeMain" component={TabScreens} />
       </Stack.Navigator>
     </NavigationContainer>
   )
