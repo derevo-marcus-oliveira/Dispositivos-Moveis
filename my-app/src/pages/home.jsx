@@ -1,19 +1,19 @@
-import {View, Text, TouchableOpacity, StyleSheet, SafeAreaView, FlatList } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, FlatList } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
 
-export default function HomeScreen({route}){
-    
+export default function HomeScreen({ route }) {
+
     const navigation = useNavigation();
     const Data = route.params.data;
 
-debugger
+    debugger
     return (
         <View>
-            <Text> Home page </Text>           
+            <Text> Home page </Text>
 
-                <Text>Quatidade de Itens: {Data ? Data.length : 0}</Text>
+            <Text>Quatidade de Itens: {Data ? Data.length : 0}</Text>
             <TouchableOpacity onPress={() => navigation.navigate("Service")}>
                 <Text>Ir Para Login</Text>
             </TouchableOpacity>
@@ -22,20 +22,20 @@ debugger
 }
 
 const style = StyleSheet.create({
-    container : {
-        flex: 1,     
+    container: {
+        flex: 1,
         alignItems: 'center',
     },
-    form : {
+    form: {
         width: 300,
         borderWidth: 1,
-        borderColor: "blue",    
+        borderColor: "blue",
         margin: 2,
         borderRadius: 5,
     },
-    input : {
+    input: {
         fontSize: "1.2em",
-        padding: 4, 
+        padding: 4,
         width: "100%"
     },
     active_danger: {
@@ -45,8 +45,8 @@ const style = StyleSheet.create({
         borderRadius: 5,
     },
     form_danger: {
-        width: 300, 
-        borderRadius: 5, 
+        width: 300,
+        borderRadius: 5,
         textAlign: "center"
     },
     active_danger: {
@@ -56,16 +56,16 @@ const style = StyleSheet.create({
         borderRadius: 5,
     },
     divider: {
-        width: "100%", 
+        width: "100%",
         borderWidth: 1,
-        borderColor: "black",    
+        borderColor: "black",
     },
     item: {
         display: "flex",
         flexDirection: "row",
         borderWidth: 1,
         borderColor: "black",
-        width: 600, 
+        width: 600,
         margin: 2,
     },
     title: {
